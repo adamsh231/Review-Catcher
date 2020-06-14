@@ -36,7 +36,12 @@
             this.totalExcellentReview = new System.Windows.Forms.Label();
             this.totalReview = new System.Windows.Forms.Label();
             this.hotelLocation = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.proceed = new System.Windows.Forms.Button();
+            this.fileName = new System.Windows.Forms.TextBox();
+            this.open = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkUrl
@@ -123,11 +128,54 @@
             this.hotelLocation.Text = "Location";
             this.hotelLocation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.open);
+            this.groupBox2.Controls.Add(this.fileName);
+            this.groupBox2.Location = new System.Drawing.Point(15, 286);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(582, 123);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "File";
+            // 
+            // proceed
+            // 
+            this.proceed.Enabled = false;
+            this.proceed.Location = new System.Drawing.Point(251, 415);
+            this.proceed.Name = "proceed";
+            this.proceed.Size = new System.Drawing.Size(104, 38);
+            this.proceed.TabIndex = 6;
+            this.proceed.Text = "Proceed";
+            this.proceed.UseVisualStyleBackColor = true;
+            this.proceed.Click += new System.EventHandler(this.proceed_Click);
+            // 
+            // fileName
+            // 
+            this.fileName.Enabled = false;
+            this.fileName.Location = new System.Drawing.Point(89, 30);
+            this.fileName.Name = "fileName";
+            this.fileName.Size = new System.Drawing.Size(384, 22);
+            this.fileName.TabIndex = 7;
+            this.fileName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // open
+            // 
+            this.open.Location = new System.Drawing.Point(479, 26);
+            this.open.Name = "open";
+            this.open.Size = new System.Drawing.Size(86, 31);
+            this.open.TabIndex = 7;
+            this.open.Text = "Open";
+            this.open.UseVisualStyleBackColor = true;
+            this.open.Click += new System.EventHandler(this.open_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 299);
+            this.ClientSize = new System.Drawing.Size(610, 460);
+            this.Controls.Add(this.proceed);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.url);
@@ -137,6 +185,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.mainForm_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,6 +202,10 @@
         private System.Windows.Forms.Label hotelLocation;
         private System.Windows.Forms.Label totalExcellentReview;
         private System.Windows.Forms.Label totalReview;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button proceed;
+        private System.Windows.Forms.Button open;
+        private System.Windows.Forms.TextBox fileName;
     }
 }
 

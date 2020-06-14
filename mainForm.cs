@@ -28,12 +28,30 @@ namespace Review_Catcher
             hotelLocation.Text = Hotel.getHotelLocation();
             totalReview.Text = Hotel.getTotalReview();
             totalExcellentReview.Text = Hotel.getTotalExcellentReview();
+            enableProceedButton();
         }
 
         private void mainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Controller.closeBrowser();
             Application.Exit();
+        }
+
+        private void open_Click(object sender, EventArgs e)
+        {
+            Excel.openReviewFile();
+            fileName.Text = Excel.getFileName();
+            enableProceedButton();
+        }
+
+        private void proceed_Click(object sender, EventArgs e)
+        {
+            //Excel.writeFileTest();
+        }
+
+        private void enableProceedButton()
+        {
+            proceed.Enabled = Controller.checkReadinessToProceed();
         }
     }
 }

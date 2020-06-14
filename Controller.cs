@@ -15,13 +15,14 @@ using System.Windows.Forms;
 
 namespace Review_Catcher
 {
-    public class Controller
+    class Controller
     {
         public static IWebDriver driver { get; set; }
-        public static ChromeDriverService option { get; set; }
         public static string url { set; get; }
         public const int WAIT_FOR_SECONDS = 10;
-        public static WebDriverWait wait { get; set; }
+        public static ChromeDriverService service = ChromeDriverService.CreateDefaultService();
+        public static ChromeOptions option = new ChromeOptions();
+        public static WebDriverWait wait { set; get; }
 
         public static void navigateToUrl(string reviewUrl)
         {
@@ -45,16 +46,16 @@ namespace Review_Catcher
 
         private static void openBrowser()
         {
-            option = ChromeDriverService.CreateDefaultService();
-            option.HideCommandPromptWindow = true;
+            service.HideCommandPromptWindow = true;
+            option.AddArgument("--lang=en");
             try
             {
-                driver = new ChromeDriver(option, new ChromeOptions());
+                driver = new ChromeDriver(service, option);
                 wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAIT_FOR_SECONDS));
             }
             catch (System.InvalidOperationException)
             {
-                MessageBox.Show("Browser gagal dibuka!, Harap tunggu beberapa saat dan coba lagi.");
+                MessageBox.Show("Browser failed to open, Please wait and try again.");
             }
             catch (Exception ex)
             {
@@ -71,5 +72,21 @@ namespace Review_Catcher
             catch (Exception) { }
         }
 
+        public static bool checkReadinessToProceed()
+        {
+            bool ready = false;
+            try
+            {
+                if(driver != null && Excel.excel != null)
+                {
+                    ready = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                ready = false;
+            }
+            return ready;
+        }
     }
 }
