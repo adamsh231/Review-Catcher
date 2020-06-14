@@ -14,12 +14,26 @@ using System.Windows.Forms;
 
 namespace Review_Catcher
 {
-    static class Hotel
+    class Hotel
     {
         public static string hotelName { get; set; }
         public static string hotelLocation { get; set; }
         public static string totalReview { get; set; }
         public static string totalExcellentReview { get; set; }
+
+        public static void filterExcellentReview()
+        {
+            try
+            {
+                Controller.wait.Until(d => ((IJavaScriptExecutor)d).ExecuteScript("return document.readyState").Equals("complete"));
+                IJavaScriptExecutor js = (IJavaScriptExecutor)Controller.driver;
+                js.ExecuteScript("document.getElementById('ReviewRatingFilter_5').click()");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error :" + ex.Message);
+            }
+        }
 
         public static string getHotelName()
         {

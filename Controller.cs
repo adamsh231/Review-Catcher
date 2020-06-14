@@ -15,11 +15,13 @@ using System.Windows.Forms;
 
 namespace Review_Catcher
 {
-    public static class Controller
+    public class Controller
     {
         public static IWebDriver driver { get; set; }
         public static ChromeDriverService option { get; set; }
         public static string url { set; get; }
+        public const int WAIT_FOR_SECONDS = 10;
+        public static WebDriverWait wait { get; set; }
 
         public static void navigateToUrl(string reviewUrl)
         {
@@ -27,6 +29,7 @@ namespace Review_Catcher
             try
             {
                 driver.Navigate().GoToUrl(url);
+                Hotel.filterExcellentReview();
             }
             catch (System.NullReferenceException)
             {
@@ -47,6 +50,7 @@ namespace Review_Catcher
             try
             {
                 driver = new ChromeDriver(option, new ChromeOptions());
+                wait = new WebDriverWait(driver, TimeSpan.FromSeconds(WAIT_FOR_SECONDS));
             }
             catch (System.InvalidOperationException)
             {

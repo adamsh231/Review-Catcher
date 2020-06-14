@@ -33,9 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.hotelName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.hotelLocation = new System.Windows.Forms.Label();
-            this.totalReview = new System.Windows.Forms.Label();
             this.totalExcellentReview = new System.Windows.Forms.Label();
+            this.totalReview = new System.Windows.Forms.Label();
+            this.hotelLocation = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,16 +90,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hotel Info";
             // 
-            // hotelLocation
+            // totalExcellentReview
             // 
-            this.hotelLocation.AutoSize = true;
-            this.hotelLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hotelLocation.Location = new System.Drawing.Point(7, 76);
-            this.hotelLocation.Name = "hotelLocation";
-            this.hotelLocation.Size = new System.Drawing.Size(86, 25);
-            this.hotelLocation.TabIndex = 4;
-            this.hotelLocation.Text = "Location";
-            this.hotelLocation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.totalExcellentReview.AutoSize = true;
+            this.totalExcellentReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalExcellentReview.Location = new System.Drawing.Point(7, 164);
+            this.totalExcellentReview.Name = "totalExcellentReview";
+            this.totalExcellentReview.Size = new System.Drawing.Size(208, 25);
+            this.totalExcellentReview.TabIndex = 6;
+            this.totalExcellentReview.Text = "Total Excellent Review";
+            this.totalExcellentReview.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // totalReview
             // 
@@ -112,16 +112,16 @@
             this.totalReview.Text = "Total Review";
             this.totalReview.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // totalExcellentReview
+            // hotelLocation
             // 
-            this.totalExcellentReview.AutoSize = true;
-            this.totalExcellentReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalExcellentReview.Location = new System.Drawing.Point(7, 164);
-            this.totalExcellentReview.Name = "totalExcellentReview";
-            this.totalExcellentReview.Size = new System.Drawing.Size(208, 25);
-            this.totalExcellentReview.TabIndex = 6;
-            this.totalExcellentReview.Text = "Total Excellent Review";
-            this.totalExcellentReview.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.hotelLocation.AutoSize = true;
+            this.hotelLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hotelLocation.Location = new System.Drawing.Point(7, 76);
+            this.hotelLocation.Name = "hotelLocation";
+            this.hotelLocation.Size = new System.Drawing.Size(86, 25);
+            this.hotelLocation.TabIndex = 4;
+            this.hotelLocation.Text = "Location";
+            this.hotelLocation.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // mainForm
             // 
