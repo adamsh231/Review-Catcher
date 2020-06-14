@@ -1,0 +1,24 @@
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\Review Catcher.exe.config
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\Review Catcher.exe
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\Review Catcher.pdb
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\EPPlus.dll
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\ExcelDataReader.DataSet.dll
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\ExcelDataReader.dll
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\SeleniumExtras.WaitHelpers.dll
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\WebDriver.dll
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\WebDriver.Support.dll
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\EPPlus.xml
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\ExcelDataReader.pdb
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\ExcelDataReader.xml
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\ExcelDataReader.DataSet.pdb
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\ExcelDataReader.DataSet.xml
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\WebDriver.xml
+E:\TUGAS\Anissa Firdauzi\Review Catcher\bin\Debug\WebDriver.Support.xml
+E:\TUGAS\Anissa Firdauzi\Review Catcher\obj\Debug\Review Catcher.csprojAssemblyReference.cache
+E:\TUGAS\Anissa Firdauzi\Review Catcher\obj\Debug\Review_Catcher.Properties.Resources.resources
+E:\TUGAS\Anissa Firdauzi\Review Catcher\obj\Debug\Review Catcher.csproj.GenerateResource.cache
+E:\TUGAS\Anissa Firdauzi\Review Catcher\obj\Debug\Review Catcher.csproj.CoreCompileInputs.cache
+E:\TUGAS\Anissa Firdauzi\Review Catcher\obj\Debug\Review Catcher.csproj.CopyComplete
+E:\TUGAS\Anissa Firdauzi\Review Catcher\obj\Debug\Review Catcher.exe
+E:\TUGAS\Anissa Firdauzi\Review Catcher\obj\Debug\Review Catcher.pdb
+E:\TUGAS\Anissa Firdauzi\Review Catcher\obj\Debug\Review_Catcher.mainForm.resources
