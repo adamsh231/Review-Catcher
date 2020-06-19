@@ -1,4 +1,5 @@
 ﻿using OfficeOpenXml;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -52,7 +53,12 @@ namespace Review_Catcher
         {
             try
             {
-                workSheet.Cells["B1"].Value = "ADAM SYARIF GANTENG";
+
+                var review_title = Controller.driver.FindElements(By.CssSelector("a.location-review-review-list-parts-ReviewTitle__reviewTitleText--2tFRT"));
+                for (int i = 0; i < review_title.Count; i++)
+                {
+                    workSheet.Cells["A"+(i+1)].Value = review_title[i].Text;
+                }
                 excel.Save();
             }
             catch (System.NullReferenceException ex)

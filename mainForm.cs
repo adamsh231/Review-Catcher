@@ -23,11 +23,16 @@ namespace Review_Catcher
 
         private void checkUrl_Click(object sender, EventArgs e)
         {
+            checkUrl.Enabled = false;
             Controller.navigateToUrl(url.Text);
             hotelName.Text = Hotel.getHotelName();
             hotelLocation.Text = Hotel.getHotelLocation();
-            totalReview.Text = Hotel.getTotalReview();
+            //totalReview.Text = Hotel.getTotalReview();
             totalExcellentReview.Text = Hotel.getTotalExcellentReview();
+            //totalEnglishReview.Text = Hotel.getTotalEnglishReview();
+            totalEstimateReview.Text = Hotel.getEstimateReview();
+            checkUrl.Enabled = true;
+
             enableProceedButton();
         }
 
@@ -46,7 +51,7 @@ namespace Review_Catcher
 
         private void proceed_Click(object sender, EventArgs e)
         {
-            //Excel.writeFileTest();
+            Excel.writeFileTest();
         }
 
         private void enableProceedButton()

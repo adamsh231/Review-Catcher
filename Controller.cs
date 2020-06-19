@@ -19,21 +19,25 @@ namespace Review_Catcher
     {
         public static IWebDriver driver { get; set; }
         public static string url { set; get; }
-        public const int WAIT_FOR_SECONDS = 10;
+        public const int WAIT_FOR_SECONDS = 30;
         public static ChromeDriverService service = ChromeDriverService.CreateDefaultService();
         public static ChromeOptions option = new ChromeOptions();
         public static WebDriverWait wait { set; get; }
+
+        //document.getElementById("autoTranslateNo").click()
 
         public static void navigateToUrl(string reviewUrl)
         {
             url = reviewUrl;
             try
             {
+                driver.Manage().Cookies.DeleteAllCookies();
                 driver.Navigate().GoToUrl(url);
-                Hotel.filterExcellentReview();
+                Hotel.filterReview();
             }
             catch (System.NullReferenceException)
             {
+                //TODO: Handling chrome not reachable loop after manually close the browser
                 closeBrowser();
                 openBrowser();
                 navigateToUrl(url);
