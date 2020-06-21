@@ -52,6 +52,7 @@ namespace Review_Catcher
         private void proceed_Click(object sender, EventArgs e)
         {
             Excel.writeFileTest();
+            MessageBox.Show("Done!");
         }
 
         private void enableProceedButton()

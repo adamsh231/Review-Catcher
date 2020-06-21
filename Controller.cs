@@ -24,7 +24,7 @@ namespace Review_Catcher
         public static ChromeOptions option = new ChromeOptions();
         public static WebDriverWait wait { set; get; }
 
-        //document.getElementById("autoTranslateNo").click()
+        
 
         public static void navigateToUrl(string reviewUrl)
         {

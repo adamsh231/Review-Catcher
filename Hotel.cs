@@ -23,6 +23,7 @@ namespace Review_Catcher
         public static string totalExcellentReview { get; set; }
         public static string totalEnglishReview { get; set; }
         public static string totalEstimateReview { get; set; }
+        public static int totalPage { get; set; }
 
         private static int ENGLISH_REVIEW_VALUE { get; set; }
 
@@ -147,8 +148,9 @@ namespace Review_Catcher
             {
                 //TODO: Better using wait.Until rather than Thread.Sleep
                 Thread.Sleep(2000);
+                totalPage = Int32.Parse(Controller.driver.FindElements(By.CssSelector("a.pageNum.cx_brand_refresh_phase2 "))[5].Text);
                 //TODO: Handle code if reviews just 1 page 
-                int calculateTotalEstimateReview = Int32.Parse(Controller.driver.FindElements(By.CssSelector("a.pageNum.cx_brand_refresh_phase2 "))[5].Text) * 5; // Max Page x 5 reviews each page
+                int calculateTotalEstimateReview = totalPage * 5; // Max Page x 5 reviews each page
                 totalEstimateReview = (calculateTotalEstimateReview - 4) + " s/d " + calculateTotalEstimateReview;
             }
             catch (OpenQA.Selenium.NoSuchElementException ex)
